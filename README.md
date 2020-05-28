@@ -1,5 +1,5 @@
 # chenkov2017_mmd
-Integrate-and-fire neuronal model of sequence generation and plasticity based on Chenkov et al. 2017 J Comp Bio
+Integrate-and-fire neuronal model of sequence generation and plasticity based on [Chenkov et al. 2017 PLOS Comp Bio](https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1005359).
 
 Tested with Python 3.7.7 on Linux (Fedora 30).
 

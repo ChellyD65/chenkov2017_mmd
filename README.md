@@ -11,3 +11,6 @@ Then just run with:
 
 `python chenkov_mmd.py`
 
+Note:
+
+This is implemented in the [BRIAN2](https://brian2.readthedocs.io/en/stable/) simulation environment.

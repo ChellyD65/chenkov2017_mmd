@@ -1,7 +1,14 @@
 # -*- coding: utf-8 -*-
 """
-replay model
-use different variable name for each connection
+chenkov_mmd.py
+Marcello DiStasio, May 2020
+based on:
+
+Chenkov et. al. Memory replay in balanced recurrent networks. January 30, 2017. PLOS Computational Biology. 
+https://doi.org/10.1371/journal.pcbi.1005359
+
+Model implemented in BRIAN2 (Goodman DFM, Brette R. The brian simulator. Front Neurosci. 2009;3:192–197. pmid:20011141)
+https://brian2.readthedocs.io/en/stable/
 
 """
 
@@ -26,13 +33,11 @@ fnamebase = os.path.splitext(os.path.basename(__file__))[0] #Basepath for data f
 # ###########################################
 
 NE = 20000          # Number of excitatory cells
-#NE = 2000          # Number of excitatory cells
 NI = int(NE/4)          # Number of inhibitory cells
 
 
 Nassembly=10   # number of cell assemblies
 NEin1assem=400  # number of excitatory cells in an assembly
-#NEin1assem=40  # number of excitatory cells in an assembly
 NIin1assem=int(NEin1assem/4)  # number of inhibitory cells in an assembly
 
 tau_E = 5.0*ms   # Glutamatergic synaptic time constant
@@ -44,17 +49,9 @@ epsilon_ee = Nassembly/NE      # probability of synaptic connections
 epsilon_ee = 0.01              # probability of synaptic connections
 
 prc=.1   #recurrent connection probability <-- 0.1 works!
-pff=.005   #feedforward connection probability <-- 0.01 works!
-
-#pff=.08   #feedforward connection probability <-- 0.01 works!
-
-
-#prc>0,pff>0 assembly sequences
-#prc>0,pff=0 disconnected hebbian assemblies
-#prc=0,pff>0 synfire chain model
+pff=.01   #feedforward connection probability <-- 0.01 works!
 
 tau_stdp = 20*ms    # STDP time constant #orig 20*ms
-
 
 # ###########################################
 # Simulation epochs
@@ -63,9 +60,6 @@ tau_stdp = 20*ms    # STDP time constant #orig 20*ms
 balancingtime=10*second
 runtime = 60*second # Simulation time
 testtime = 0.5*second
-# balancingtime=1*second
-# runtime = 1*second # Simulation time
-# testtime = 0.5*second
 
 # ###########################################
 # Neuron model

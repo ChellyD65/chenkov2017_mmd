@@ -8,7 +8,7 @@ Chenkov et. al. Memory replay in balanced recurrent networks. January 30, 2017. 
 https://doi.org/10.1371/journal.pcbi.1005359
 
 Model implemented in BRIAN2 (Goodman DFM, Brette R. The brian simulator. Front Neurosci. 2009;3:192–197. pmid:20011141)
-https://brian2.readthedocs.io/en/stable/
+https://brian2.readthedocs.io/en/stable/ 
 
 """
 
